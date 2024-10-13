@@ -1,0 +1,46 @@
+import java.util.Scanner;
+class codsoft2{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("No. of students whose result you want to check: ");
+        int aa=sc.nextInt();
+        while(aa-->0){
+            int count=1;
+            char grade=' ';
+            System.out.println("Enter the marks of student"+count+" :");
+            System.out.print("Enter the marks of math: ");
+            int math=sc.nextInt();
+            System.out.print("Enter the marks of english: ");
+            int english=sc.nextInt();
+            System.out.print("Enter the marks of science: ");
+            int science=sc.nextInt();
+            System.out.print("Enter the marks of history: ");
+            int history=sc.nextInt();
+            System.out.print("Enter the marks of marathi: ");
+            int marathi=sc.nextInt();
+            int sum=math+english+science+history+marathi;
+            float avg=sum/5;
+            if(avg>90 &&avg<=100){
+                grade='A';
+            }
+            else if(avg>80 &&avg<=90){
+                grade='B';
+            }
+            else if(avg>70 &&avg<=80){
+                grade='C';
+            }
+            else if(avg>60 &&avg<=70){
+                grade='D';
+            }
+            else{
+                grade='E';
+            }
+            System.out.println("---------------------------------------------------------------");
+            System.out.println("Result of student"+count +" : ");
+            System.out.println("Total marks: "+sum+"\nAverage percentage: "+avg+"%\nGrade: "+grade);
+            System.out.println("-----------------------------------------------------------------------");
+            System.out.println("-----------------------------------------------------------------------");
+            count++;
+        }
+    }
+}
